@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {
-  TouchableWithoutFeedback,
+  TouchableOpacity,
   Text,
   View
 } from 'react-native';
@@ -192,7 +192,7 @@ class Day extends Component {
     }
 
     return (
-      <TouchableWithoutFeedback
+      <TouchableOpacity
         onPress={this.onDayPress}
         onLongPress={this.onDayLongPress}>
         <View style={this.style.wrapper}>
@@ -201,7 +201,7 @@ class Day extends Component {
             <Text allowFontScaling={false} style={textStyle}>{String(this.props.children)}</Text>
           </View>
         </View>
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     );
   }
 }
